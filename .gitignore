@@ -1,0 +1,66 @@
+# Untrack folders #
+###################
+address-book/
+alien-greeting-js/
+at-a-conference/
+bank-balance-js/
+checkout-line-js/
+cheese-rolling-js/
+dice-game-js/
+door-dish-js/
+french-toast-expedition/
+function-testing-tdd-and-javascript/
+grocery-list-array/
+guess-the-number-javascript/
+hangman-in-space-js/
+high-card-dealer-js/
+javascript-classes-practice/
+javascript-function-drills/
+js-array-drills/
+js-exclusive-dining/
+js-formatting-drills/
+js-objects-marathon/
+launch-air-part-1/
+launch-air-part-1-html/
+launch-air-part-2/
+launch-sc-diner-menus-js/
+magic-8-ball-js/
+musical-objects-js/
+navigating-javascript-arrays/
+ninety-nine-bottles-js/
+object-destructuring-drills/
+object-literal-methods-drills/
+object-oriented-marathon-js/
+odd-numbers-js/
+perimeter-function-js/
+planting-a-garden/
+pool-measurements-js/
+preflight-challenge-comments-and-variables/
+preflight-challenge-flow-control/
+preflight-challenge-introduction-to-arrays/
+preflight-challenge-validating-user-input/
+public-space-flights-javascript/
+quiz-app/
+README.md
+rock-paper-scissors_c101/
+rock-paper-scissors-js/
+smart-vending-machine-js/
+tdd-perimeter-function-js/
+validating-user-input-js/
+
+# Compiled source #
+###################
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+
+# Packages #
+############
+
+# Logs and databases #
+######################
+.bash_history
+.et
+.viminfo
+
+# OS generated files #
+######################

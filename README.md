@@ -1,4 +1,4 @@
-<img src="https://learn.launchacademy.com/assets/dyson_sphere/launch-logo-ec11466202b39431f9d3a67f9482886cd5de2f3301ce99067163159e48571006.png" width="60%" height="60%">
+<img src="https://learn.launchacademy.com/assets/dyson_sphere/launch-logo-ec11466202b39431f9d3a67f9482886cd5de2f3301ce99067163159e48571006.png" width="20%" height="20%">
 
 A compilation of most of work I completed for Launch Academy during my time in the Apprenti 3 cohort.
 
