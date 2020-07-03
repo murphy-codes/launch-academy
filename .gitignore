@@ -35,7 +35,6 @@ odd-numbers-js/
 perimeter-function-js/
 planting-a-garden/
 pool-measurements-js/
-preflight-challenge-comments-and-variables/
 preflight-challenge-flow-control/
 preflight-challenge-introduction-to-arrays/
 preflight-challenge-validating-user-input/
@@ -60,6 +59,7 @@ validating-user-input-js/
 ######################
 .bash_history
 .et
+**.etignore
 .viminfo
 
 # OS generated files #
