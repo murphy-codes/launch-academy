@@ -45,6 +45,7 @@ validating-user-input-js/
 .cache/
 .et
 **.etignore
+.gitconfig
 .viminfo
 
 # OS generated files #
