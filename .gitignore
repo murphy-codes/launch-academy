@@ -16,7 +16,6 @@ launch-air-part-1/
 launch-air-part-1-html/
 launch-air-part-2/
 launch-sc-diner-menus-js/
-magic-8-ball-js/
 musical-objects-js/
 navigating-javascript-arrays/
 object-destructuring-drills/
@@ -42,8 +41,8 @@ validating-user-input-js/
 
 # Logs and databases #
 ######################
-.cache/
 .bash_history
+.cache/
 .et
 **.etignore
 .viminfo
