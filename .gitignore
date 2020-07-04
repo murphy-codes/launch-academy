@@ -42,6 +42,7 @@ validating-user-input-js/
 
 # Logs and databases #
 ######################
+.cache/
 .bash_history
 .et
 **.etignore
