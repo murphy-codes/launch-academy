@@ -1,0 +1,12 @@
+{
+  "name": "musical-objects-js",
+  "version": "1.0.0",
+  "description": "Creating a database of musicals using JS objects and factory functions in multiple files.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
