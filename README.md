@@ -14,3 +14,6 @@ The goal of these lessons was to give the students a solid foundation of knowled
 
 #### /[Week_02](https://github.com/murphy-codes/launch-academy/tree/master/Week_02)/[js-objects-marathon](https://github.com/murphy-codes/launch-academy/tree/master/Week_02/js-objects-marathon)/
 > It's finally time for you to get out and explore space! Since you're so new, the crew won't lend you a ship - we've got to work together and build one that will get us there!
+
+#### /[Week_03](https://github.com/murphy-codes/launch-academy/tree/master/Week_03)/[test-flight-js](https://github.com/murphy-codes/launch-academy/tree/master/Week_03/test-flight-js)/
+> Let's create some tests to ensure our airplanes are functioning properly.
