@@ -1,0 +1,16 @@
+{
+  "name": "tdd-perimeter-function",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "babel-jest": "^26.0.1",
+    "jest": "^26.0.1"
+  }
+}
