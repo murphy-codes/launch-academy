@@ -1,0 +1,12 @@
+{
+  "name": "launch-air-part-2",
+  "version": "1.0.0",
+  "description": "Model Airplanes, Flights, Passengers, and Tickets using JS Classes",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
