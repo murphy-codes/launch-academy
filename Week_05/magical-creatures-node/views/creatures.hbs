@@ -1,0 +1,7 @@
+<h1>View our critters</h1>
+<ul>
+  {{#each creature}}
+  <li><a href="/creatures/{{this.name}}">{{this.name}}</a></li>
+  {{/each}}
+</ul>
+<a href="/">Home</a>
