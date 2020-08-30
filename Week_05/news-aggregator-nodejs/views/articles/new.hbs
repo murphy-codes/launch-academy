@@ -1,0 +1,15 @@
+<h1>Create a New Article</h1>
+
+<form action="" method="POST">
+  {{#each fields}}
+  <label for="{{this}}">{{this}}</label>:
+  <input type="text" placeholder="article {{this}}" id="{{this}}" name="{{this}}" /><br><br>
+  {{/each}}
+  <input type="submit" value="Submit" />
+</form>
+
+<h2>
+  <a href="/articles/">Return to articles</a> |
+  <a href="/random">View Random Articles</a> |
+  <a href="/random-article">View a Random Article</a>
+</h2>
