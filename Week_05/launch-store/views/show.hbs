@@ -1,0 +1,7 @@
+<h1>{{product.name}}</h1>
+<p>Description: {{product.description}}</p>
+<p>Price: ${{product.price}}</p>
+<form action="/delete/{{product.name}}" method="get">
+    <input type="submit" value="Delete item">
+</form><br>
+<a href="/">Return Home</a>

@@ -1,0 +1,7 @@
+<h1>Welcome Coder</h1>
+<p>View our featured products!</p>
+<ul>
+  {{#each products}}
+  <li>${{this.price}}: <a href="/{{this.name}}">{{this.name}}</a></li>
+  {{/each}}
+</ul>

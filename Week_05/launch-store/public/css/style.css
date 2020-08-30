@@ -1,0 +1,24 @@
+h1 {
+  color: #37becc;
+}
+
+#add-a-new-product-form {
+  margin-left: 0.625rem;
+}
+
+#form-error {
+  margin-left: 0.625rem;
+  
+}
+
+.error {
+  color: #bd0000;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* .normal-weight {
+  font-weight: normal;
+} */

@@ -1,0 +1,18 @@
+<h1>Welcome Coder</h1>
+<h2>Add a new product!</h2>
+
+ <span id="form-error" class="bold error">{{errors.form}}</span>
+<form action="/add" method="post" id="add-a-new-product-form">
+  <label for="name">Product Name:</label><span class="error">{{errors.name}}</span><br>
+    <input type="text" id="name" name="name" value="{{product.name}}"><br>
+  <label for="description">Description:</label><span class="error">{{errors.description}}</span><br>
+    <input type="text" id="description" name="description" value="{{product.description}}"><br>
+  <label for="price">Price:</label><span class="error">{{errors.price}}</span><br>
+    <input type="text" id="price" name="price" value="{{product.price}}"><br>
+  <span class="error">{{errors.featured}}</span><br><span>Featured: </span>
+  <label for="featured-true">Y</label>
+    <input type="radio" id="featured-true" name="featured" value="true" {{featured}}>
+  <label for="featured-false">N</label>
+    <input type="radio" id="featured-false" name="featured" value="false" {{notFeatured}}><br><br>
+  <input type="submit" value="Submit">
+</form>
