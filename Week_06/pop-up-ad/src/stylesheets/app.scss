@@ -1,0 +1,58 @@
+/* Your styling here */
+.popup-box {
+  background-color: #EB57C3;
+  color: #F5D748;
+  border: 0.1875rem solid #000;
+  border-radius: 0.75rem;
+  width: 80%;
+  // min-width: 60%;
+  // max-width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 0.625rem;
+}
+
+.popup-box h1 {
+  font-size: 2rem;
+}
+
+.popup-box p {
+  font-size: 1.25rem;
+}
+
+.popup-box form {
+  width: 70%;
+  margin: auto;
+}
+
+.popup-box input[type="text"] {
+  // width: 77.5%;
+  // width: auto;
+  width: 25rem;
+  display: inline;
+  border: 0.125rem solid #CACACA;
+  background-color: #F5D748;
+}
+
+.popup-box input[type="submit"] {
+  // width: 17.5%;
+  width: 11rem;
+  margin-left: 0.75%;
+  display: inline;
+  border: 0.125rem solid #000;
+  background-color: #53C0BC;
+  color: #EB57C3;
+  height: 2.4375rem;
+  font-weight: 600;
+  padding: 0 0.375rem;
+}
+
+.popup-box input[type="submit"]:hover {
+  background-color: #50b9b6;
+  color: #e008a7;
+}
+
+// .close-button {
+//   // text-align: right;
+//   text-align: center;
+// }
