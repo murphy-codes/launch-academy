@@ -1,0 +1,86 @@
+.page {
+  background-color: $light-blue;
+  padding-bottom: 10rem;
+
+  h1 {
+    text-align: center;
+    color: $blue;
+  }
+}
+
+.question-list {
+  padding: 1rem 10rem;
+  color: $grey
+}
+
+.unselected-question {
+  padding: 1rem 0;
+  border-bottom: solid 1px;
+
+  i {
+    padding: 0px 2rem;
+  }
+
+   h5 {
+     display: inline-block;
+   }
+}
+
+.selected-question {
+  padding: 1rem 0;
+
+  i {
+    padding: 0px 2rem;
+  }
+
+   h5 {
+     display: inline-block;
+   }
+}
+
+.green {
+  color: green;
+}
+
+#faq-form {
+  width: 80%;
+  margin: auto;
+}
+
+#launchers-wrapper {
+  width: 24rem;
+  margin: auto;
+  padding-top: 2rem;
+}
+
+
+.launcher{
+  font-family: 'Tangerine', cursive;
+  font-size: 4rem;
+  text-shadow: 4px 4px 4px #aaa;
+
+  &-link {
+    color: #005ac0;
+    margin-bottom: 0.25rem;
+  
+    &:hover {
+      color: #00255e;
+      font-weight: bold;
+    }
+  }
+}
+
+.tangerine {
+  font-family: 'Tangerine', cursive;
+}
+
+#launchers-wrapper h3 {
+  font-size: 3.25rem;
+  float: left;
+  margin-right: 0.5rem;
+}
+
+#launchers-wrapper p {
+  font-size: 2.5rem;
+  padding-top: 0.75rem;
+}
