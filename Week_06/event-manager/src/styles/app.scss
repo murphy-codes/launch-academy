@@ -1,0 +1,89 @@
+  @import url('https://fonts.googleapis.com/css?family=ABeeZee|Open+Sans');
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  h1 {
+    font-family: 'ABeeZee', serif;
+    text-align: center;
+    margin: 0;
+  }
+
+  .event-text {
+    font-family: 'ABeeZee', serif;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  div {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .event-tile, .event-management-app {
+    position:relative;
+  }
+
+  .pink-bg {
+    background-color: #ed1a7b;
+  }
+
+  .green-bg {
+    background-color: #84ce15;
+  }
+
+  .blue-bg {
+    background-color: #37becc;
+  }
+
+  .grey-bg {
+    background-color: #9c9c9c;
+  }
+
+  .greyed-out {
+    color: #6b6b6b;
+  }
+
+  .event-management-app {
+    background-color: #e5f3f4;
+    color: #1c2224;
+  }
+
+  .icon {
+    color: #fff;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .icon:hover {
+    color: #ddd;
+    background-color: #777;
+  }
+
+  .icon-dark {
+    color: #acacac;
+    position: absolute;
+    top: 1.75rem;
+    right: 3.75rem;
+  }
+
+  .icon-dark:hover {
+    color: #929292;
+  }
+
+  .icon-dark:active {
+    color: #6d6d6d;
+  }
+  
+  .centered {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
