@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS songs;
+CREATE TABLE songs (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  song_length VARCHAR(255) NOT NULL,
+  artist VARCHAR(255) NOT NULL,
+  album VARCHAR(255)
+);

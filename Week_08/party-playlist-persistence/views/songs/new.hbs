@@ -1,0 +1,44 @@
+<h1 class="center">Add a New Song!</h1>
+{{#if errors }}
+<ul class="errors">
+  {{#each errors}}
+  <li>{{ this }}</li>
+  {{/each}}
+</ul>
+{{/if }}
+
+<form action="/songs" method="POST" id="new-song-form">
+  <div>
+    <label>
+      Title *
+      <input type="text" name="song[title]" value="{{ song.title }}" />
+    </label>
+  </div>
+
+  <div>
+    <label>
+      Song Length *
+      <input type="text" name="song[song_length]" value="{{ song.song_length }}" />
+    </label>
+  </div>
+
+  <div>
+    <label>
+      Artist *
+      <input type="text" name="song[artist]" value="{{ song.artist }}" />
+    </label>
+  </div>
+
+  <div>
+    <label>
+      Album
+      <input type="text" name="song[album]" value="{{ song.album }}" />
+    </label>
+  </div>
+
+  <p id="require-descriptor">* denotes a required field</p>
+  <div>
+    <input type="submit" value="Add Song" />
+  </div>
+</form>
+

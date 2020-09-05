@@ -1,0 +1,53 @@
+th {
+  background-color: #455e94;
+  border: 1px solid #5270af;
+  color: #fff;
+  text-align: left;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.errors {
+  color: #b10e0e;
+  width: 20rem;
+  margin: auto  ;
+}
+
+#new-song-form {
+  width: 56rem;
+  margin: auto;
+}
+
+#journal-entry-body {
+  height: 10rem;
+}
+
+input:hover {
+  background-color: #f4f4f4;
+}
+
+input[type="text"]:focus {
+  background-color: #f1f1f1;
+}
+
+input[type=submit] {
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #d8d8d8;
+}
+
+input[type=submit]:focus {
+  background-color: #c4c4c4;
+  /* background-color: red; */
+}
+
+#require-descriptor {
+  font-size: 0.70rem;
+  font-style: italic;
+  margin-left: 0.5rem;
+}

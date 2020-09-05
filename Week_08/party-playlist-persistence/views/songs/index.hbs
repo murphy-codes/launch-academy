@@ -1,0 +1,18 @@
+<h1>Launch Party Playlist!</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Duration</th>
+    <th>Artist</th>
+    <th>Album</th>
+  </tr>
+  {{#each songs }}
+  <tr>
+    <td>{{ this.title }}</td>
+    <td>{{ this.song_length }}</td>
+    <td>{{ this.artist }}</td>
+    <td>{{ this.album }}</td>
+  </tr>
+  {{/each}}
+</table>
