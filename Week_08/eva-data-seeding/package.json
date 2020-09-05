@@ -1,0 +1,11 @@
+{
+  "name": "eva-data-seeding",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "line-reader": "^0.4.0",
+    "pg": "^7.11.0"
+  }
+}
