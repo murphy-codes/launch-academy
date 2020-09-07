@@ -1,0 +1,30 @@
+---- RECEIPTS LOG ------------------------
+
+--------------------
+Transaction #00000007
+  Date: 2020-08-20
+  Time: 20:34:55
+TOTAL DUE:  $15.00
+TOTAL PAID: $20.00
+CHANGE DUE: $5.00
+--------------------
+
+
+--------------------
+Transaction #00000008
+  Date: 2020-08-20
+  Time: 20:35:01
+TOTAL DUE:  $25.00
+TOTAL PAID: $40.00
+CHANGE DUE: $15.00
+--------------------
+
+
+--------------------
+Transaction #00000009
+  Date: 2020-08-20
+  Time: 20:38:59
+TOTAL DUE:  $38.00
+TOTAL PAID: $40.00
+CHANGE DUE: $2.00
+--------------------
