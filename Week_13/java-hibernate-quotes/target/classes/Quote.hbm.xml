@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="Quote" table="quotes">
+        <meta attribute="class-description">
+            Quote information
+        </meta>
+        <id name="id" type="long" column="id">
+            <generator class="sequence">
+                <param name="optimizer">none</param>
+                <param name="increment_size">1</param>
+                <param name="sequence_name">quotes_id_seq</param>
+            </generator>
+        </id>
+        <property name ="quote" column="quote" type = "string" />
+        <property name ="author" column="author" type = "string" />
+        <property name ="subject" column="subject" type = "string" />
+    </class>
+</hibernate-mapping>
