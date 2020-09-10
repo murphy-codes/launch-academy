@@ -30,7 +30,35 @@
       <artifactId>postgresql</artifactId>
       <version>42.2.5</version>
     </dependency>
+
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <version>2.0.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.validator</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>6.0.2.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate.validator</groupId>
+      <artifactId>hibernate-validator-annotation-processor</artifactId>
+      <version>6.0.2.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.el</groupId>
+      <artifactId>javax.el-api</artifactId>
+      <version>3.0.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.glassfish.web</groupId>
+      <artifactId>javax.el</artifactId>
+      <version>2.2.6</version>
+    </dependency>
   </dependencies>
+
   <build>
     <plugins>
       <plugin>
@@ -38,7 +66,7 @@
         <artifactId>flyway-maven-plugin</artifactId>
         <version>5.2.4</version>
         <configuration>
-          <url>jdbc:postgresql://localhost:5432/contacts</url>
+          <url>jdbc:postgresql://localhost:5432/movie_database</url>
           <user>postgres</user>
           <password>password</password>
         </configuration>
