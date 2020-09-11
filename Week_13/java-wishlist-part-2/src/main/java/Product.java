@@ -7,9 +7,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
+//import javax.validation.constraints.Digits;
 
 @Entity
 @Table(name = "products")
@@ -24,11 +27,17 @@ public class Product {
   @Column(name = "name", nullable = false, unique = true)
   private String name;
 
-  @Digits(integer=7, fraction=2)
+//  @Digits(integer=7, fraction=2)
+//  @NotBlank
+//  @NotEmpty
+//  @NotNull
+  @NotNull(message = "must specify a price")
+  @Positive
   @Column(name = "price", precision=8, scale=2) // @Column(name = "price")
   private Float price;
 
-  @Pattern(regexp="http?s:.*", message = "must start with 'http:' or 'https:'")
+  @NotBlank
+  @Pattern(regexp="^https?:.*", message = "must start with 'http:' or 'https:'")
   @Column(name = "url", nullable = false)
   private String url;
 

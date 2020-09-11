@@ -124,41 +124,33 @@ public class MainMenu {
   }
 
   private void addProduct() {
-    Product product = new Product();
-    ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-    Validator validator = factory.getValidator();
-    Set<ConstraintViolation<Product>> violations = validator.validate(product);
-
-    if(violations.size() > 0) {
-      for (ConstraintViolation<Product> violation : violations) {
-        System.out.println(violation.getPropertyPath() + ": " + violation.getMessage());
-      }
+    String productName = getStringInput("Enter a product name:\n> ");
+    if (productExists(productName)) {
+      System.out.println("Product: \"" + productName + "\" already exists in our database!");
     } else {
-      System.out.println("Ready to persist");
+      ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+      Validator validator = factory.getValidator();
+      Product product = new Product();
+      Set<ConstraintViolation<Product>> violations;
+      do {
+        product.setName(productName);
+        product.setPrice(promptFloat("How much does it cost?\n> "));
+        product.setUrl(getStringInput("Enter a product URL:\n> "));
+        String addCategory = promptYesNo("Would you like to add a category? (y/n)\n> ");
+        if (addCategory.equals("y")) {
+          String categoryName = getStringInput("Enter a category name:\n> ");
+          if (categoryExists(categoryName)) { product.setCategory(getCategoryByName(categoryName)); }
+          else { product.setCategory(createCategory(categoryName)); }
+        }
+        violations = validator.validate(product);
+        if(violations.size() > 0) { for (ConstraintViolation<Product> violation : violations) { System.out.println(violation.getPropertyPath() + ": " + violation.getMessage()); }}
+      } while (violations.size() > 0);
+      try {
+        em.getTransaction().begin();
+        em.persist(product);
+        em.getTransaction().commit();
+      } catch (Exception e) { e.printStackTrace(); }
     }
-
-
-
-//    try {
-//      String productName = getStringInput("Enter a product name:\n> ");
-//      if (productExists(productName)) {
-//        System.out.println("Product: \"" + productName + "\" already exists in our database!");
-//      } else {
-//        Product product = new Product();
-//        product.setName(productName);
-//        product.setPrice(promptFloat("How much does it cost?\n> "));
-//        product.setUrl(getStringInput("Enter a product URL:\n> "));
-//        String addCategory = promptYesNo("Would you like to add a category? (y/n)\n> ");
-//        if (addCategory.equals("y")) {
-//          String categoryName = getStringInput("Enter a category name:\n> ");
-//          if (categoryExists(categoryName)) { product.setCategory(getCategoryByName(categoryName)); }
-//          else { product.setCategory(createCategory(categoryName)); }
-//        }
-//        em.getTransaction().begin();
-//        em.persist(product);
-//        em.getTransaction().commit();
-//      }
-//    } catch (Exception e) { e.printStackTrace(); }
   }
 
   private void listProducts() {
@@ -171,9 +163,9 @@ public class MainMenu {
     List<Category> categories = em.createQuery("SELECT c from Category c ORDER BY id", Category.class).getResultList();
     System.out.println("\nCategories:\n-------------------------------");
     for (Category category : categories) {
-      TypedQuery<Long> countQuery = em.createQuery("SELECT COUNT(p) from Product p WHERE category_id = '" + category.getId() + "'", Long.class);
-      Long numProducts = countQuery.getSingleResult();
-      System.out.println("  " + category.getId() + ". " + category.getName() + " (" + numProducts + ")");
+      Long numProducts = em.createQuery("SELECT COUNT(p) from Product p WHERE category_id = '" + category.getId() + "'", Long.class).getSingleResult();
+      Double avgPrice = em.createQuery("SELECT AVG(p.price) from Product p WHERE category_id = '" + category.getId() + "'", Double.class).getSingleResult();
+      System.out.println("  " + category.getId() + ". " + category.getName() + " (" + numProducts + " items) [avg price: $" + String.format("%.2f", avgPrice) + "]");
     }
   }
 
