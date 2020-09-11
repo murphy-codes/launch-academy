@@ -73,4 +73,8 @@ public class Product {
   public void setCategory(Category category) { this.category = category; }
 
   public String toDisplayString() { return "  " + id + ". " + name + " " + price + " " + url + " " + (category != null ? category.getName() : ""); }
+
+  public boolean hasCategory() { return category!=null; }
+
+  public String toOutputString() { return name+","+price+","+url+","+(hasCategory() ? category.getName() : "")+"\n"; }
 }

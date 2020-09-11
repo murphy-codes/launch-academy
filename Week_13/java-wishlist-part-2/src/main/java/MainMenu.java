@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -22,6 +25,8 @@ public class MainMenu {
     c("View Products In a Category"),
     d("Remove a Product from the Wishlist"),
     r("Remove a Category from the Wishlist"),
+    e("Export to CSV File"),
+    i("Import from CSV File"),
     q("Exit");
 
     private String optionText;
@@ -45,10 +50,8 @@ public class MainMenu {
   public void menu() {
     emf = Persistence.createEntityManagerFactory("com.launchacademy.wishlist");
     em = emf.createEntityManager();
-
     createMenu();
     printMenu();
-
     MenuOption inputOption;
     do{
       inputOption = null;
@@ -64,6 +67,8 @@ public class MainMenu {
       else if(inputOption == MenuOption.c) { listProductsByCategory(); }
       else if(inputOption == MenuOption.d) { deleteProduct(); }
       else if(inputOption == MenuOption.r) { deleteCategory(); }
+      else if(inputOption == MenuOption.e) { exportToCsv(); }
+      else if(inputOption == MenuOption.i) { importFromCsv(); }
       if(inputOption != MenuOption.q) { printMenu(); }
     } while(inputOption != MenuOption.q);
     System.out.println("Thanks! Please return to your wishlist soon!");
@@ -74,7 +79,7 @@ public class MainMenu {
 
   private void createMenu() {
     options = new HashMap<>();
-    List<String> optionLetters = new ArrayList<>(Arrays.asList("a", "l", "c", "d", "r", "q"));
+    List<String> optionLetters = new ArrayList<>(Arrays.asList("a", "l", "c", "d", "r", "e", "i", "q"));
     for (int i = 0; i < optionLetters.size(); i++) { options.put(String.valueOf(i+1), optionLetters.get(i)); }
   }
 
@@ -143,7 +148,7 @@ public class MainMenu {
           else { product.setCategory(createCategory(categoryName)); }
         }
         violations = validator.validate(product);
-        if(violations.size() > 0) { for (ConstraintViolation<Product> violation : violations) { System.out.println(violation.getPropertyPath() + ": " + violation.getMessage()); }}
+        if(violations.size() > 0) { for (ConstraintViolation<Product> violation : violations) { System.out.println(violation.getPropertyPath() + ": " + violation.getMessage()); } }
       } while (violations.size() > 0);
       try {
         em.getTransaction().begin();
@@ -250,5 +255,70 @@ public class MainMenu {
     listCategories();
     long categoryId = promptLong("\nEnter a category id to delete:\n> ");
     deleteCategoryById(categoryId);
+  }
+
+  public void exportToCsv() {
+    String wishlist = "name,price,url,category_name\n";
+    List<Product> products = em.createQuery("SELECT p FROM Product p", Product.class).getResultList();
+    for (Product product : products) { wishlist += product.toOutputString(); }
+    File wishlistCsv = new File("wishlist.csv");
+    boolean exists = wishlistCsv.exists();
+    FileWriter fileWriter;
+    try {
+      fileWriter = new FileWriter(wishlistCsv);
+      fileWriter.write(wishlist);
+      fileWriter.close();
+      if (wishlistCsv.exists()) { System.out.println("\n'Wishlist.csv' file " + (exists ? "upda" : "crea") + "ted.\n"); }
+    } catch (IOException e) { e.printStackTrace(); }
+  }
+
+  public void importFromCsv() {
+    System.out.println("importFromCsv()\n");
+    String fileName = getStringInput("Please input a wishlist csv file to process:\n> ");
+    try {
+      File wishlistCsv = new File(fileName);
+      if (wishlistCsv.exists()) {
+        Scanner dataScanner = new Scanner(wishlistCsv);
+        if (dataScanner.nextLine().equals("name,price,url,category_name")) {
+          int failed, rowsImported;
+          failed = rowsImported = 0;
+          while (dataScanner.hasNextLine()) {
+            if(autoAddProduct(dataScanner.nextLine().split(","))) { rowsImported++; }
+            else { failed++; }
+          }
+          System.out.println(rowsImported + " rows imported." + (failed>0 ? " " + failed + " rows failed to import." : ""));
+        } else { System.out.println("Wishlist file is not formatted correctly!"); }
+      } else { System.out.println("That file doesn't exist!"); }
+    } catch (IOException e) { e.printStackTrace(); }
+  }
+
+  public boolean autoAddProduct(String[] productStr) {
+    if (productExists(productStr[0])) {
+      return false;
+    } else {
+      ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+      Validator validator = factory.getValidator();
+      Product product = new Product();
+      Set<ConstraintViolation<Product>> violations;
+        product.setName(productStr[0]);
+        product.setPrice(Float.valueOf(productStr[1]));
+        product.setUrl(productStr[2]);
+        if (categoryExists(productStr[3])) { product.setCategory(getCategoryByName(productStr[3])); }
+        else { product.setCategory(createCategory(productStr[3])); }
+        violations = validator.validate(product);
+        if(violations.size() > 0) {
+          for (ConstraintViolation<Product> violation : violations) { System.out.println(violation.getPropertyPath() + ": " + violation.getMessage()); }
+          return false;
+        }
+      try {
+        em.getTransaction().begin();
+        em.persist(product);
+        em.getTransaction().commit();
+        return true;
+      } catch (Exception e) {
+        e.printStackTrace();
+        return false;
+      }
+    }
   }
 }
