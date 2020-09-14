@@ -17,7 +17,6 @@
       donutOrders.put("Carly", 3);
       int totalDonuts = 0;
       List<String> donutNuts = new ArrayList<String>();
-
       Map<String, String> favDonuts = new HashMap<String, String>();
       favDonuts.put("Alex", "Maple");
       favDonuts.put("Carly", "Glazed");
@@ -27,26 +26,15 @@
     <p>As of: <%= new java.util.Date().toLocaleString() %></p>
 
     <ul>
-    <% for(String employee: donutOrders.keySet()) { %>
-      <li><%= employee %>:
-      <% if (donutOrders.get(employee)>5) {
-        donutNuts.add(employee);
-        totalDonuts+=2;
-        %> 2 <%
-      } else{
-        totalDonuts+=donutOrders.get(employee);
-        %> <%= donutOrders.get(employee) %> <%
-      } %>
-       donut(s) <% if (favDonuts.containsKey(employee)) { %> (fav donut: <%= favDonuts.get(employee) %>) <% } %>
-      </li> <%
+    <% for(String employee: donutOrders.keySet()) {
+      int donutCount = donutOrders.get(employee);
+      if (donutCount > 5) { donutCount = 2; }
+      totalDonuts+=donutCount;
+      %> <li><%= employee + ": " + donutCount + " donut(s)" %> <% if (favDonuts.containsKey(employee)) { %> (fav donut: <%= favDonuts.get(employee) %>) <% } %> </li> <%
     } %>
     </ul>
 
     <p>Total donuts: <%= totalDonuts %></p>
-
-
-
-
 
     <% if (donutNuts.size() != 0) { %>
       <p>Talk to the following people about not trying to game the donut system (and the perils of sugar crashes!): </p>
@@ -56,10 +44,6 @@
         <%} %>
       </ul>
     <% } %>
-
-
-
-
 
   </body>
 </html>
