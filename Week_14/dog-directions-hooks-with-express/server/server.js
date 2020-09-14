@@ -19,12 +19,14 @@ app.use(express.static(path.join(__dirname, "../public")))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
+app.set('json spaces', 2);
+
 app.get("/", (req, res) => {
   res.send("Hello from the backend")
 })
 
 app.get("/api/v1/favoriteThings.json", (req, res) => {
-  const jsonString = fs.readFileSync(path.join(__dirname, "../favoriteThings.json")).toString()
+  const jsonString = fs.readFileSync(path.join(__dirname, "../favorite_things.json")).toString()
   res.json(JSON.parse(jsonString))
 })
 
