@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class League {
-  private List<Team> teams;
+  private ArrayList<Team> teams;
   public League() {
     this.teams = new ArrayList<Team>();
   }
@@ -10,6 +10,8 @@ public class League {
   public void addTeam(Team team) {
     teams.add(team);
   }
+
+  public ArrayList<Team> getTeams() { return teams; }
 
   static League getLeague() {
     League theLeague = new League();
