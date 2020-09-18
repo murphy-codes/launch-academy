@@ -3,13 +3,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.*;
-
-import org.hibernate.validator.constraints.Length;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "games")
@@ -20,28 +18,32 @@ public class Game {
   @Column(name = "id", nullable = false, unique = true)
   private Long id;
 
-  @NotEmpty
+  @NotNull
+//  @NotBlank(message = "must specify a red team player 1")
   @Column(name="red_team_player_1", nullable=false)
   private String redTeamPlayer1;
 
-  @NotEmpty
+  @NotNull
+//  @NotBlank(message = "must specify a red team player 2")
   @Column(name="red_team_player_2", nullable=false)
   private String redTeamPlayer2;
 
-  @NotEmpty
+  @NotNull
   @Min(0)
   @Column(name="red_team_score", nullable=false)
   private Integer redTeamScore;
 
-  @NotEmpty
+  @NotNull
+//  @NotBlank(message = "must specify a blue team player 1")
   @Column(name="blue_team_player_1", nullable=false)
   private String blueTeamPlayer1;
 
-  @NotEmpty
+  @NotNull
+//  @NotBlank(message = "must specify a blue team player 2")
   @Column(name="blue_team_player_2", nullable=false)
   private String blueTeamPlayer2;
 
-  @NotEmpty
+  @NotNull
   @Min(0)
   @Column(name="blue_team_score", nullable=false)
   private Integer blueTeamScore;
