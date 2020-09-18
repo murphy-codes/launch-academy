@@ -27,10 +27,10 @@ To store important Shuffleboard stats
   - blue_team_player_2
   - blue_team_score
 
-- Create an `@Entity` for Game.
+- Create an `@Entity` for com.launchacademy.games.Game.
 
 
-### Log a Game
+### Log a com.launchacademy.games.Game
 
 ```no-highlight
 As a shuffleboard player
@@ -47,7 +47,7 @@ Acceptance Criteria:
 
 *** You will eventually be asked to create a DAO for this, if you are comfortable with them you can simply create it now. ***
 
-### Display Game Results
+### Display com.launchacademy.games.Game Results
 
 ```no-highlight
 As a shuffleboard player
@@ -71,7 +71,7 @@ To ensure I'm programming to an interface
 
 Acceptance Criteria:
 
-- Create a `service` (DAO) for your Game objects to interact with the database.
+- Create a `service` (DAO) for your com.launchacademy.games.Game objects to interact with the database.
 - Extract any persistence and data retrieval from the `servlet` to the `service`.
 
 ## Non-Core User Stories

@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS games;
 
-CREATE TABLE games(
+CREATE TABLE games (
   id SERIAL PRIMARY KEY,
   red_team_player_1 VARCHAR NOT NULL,
   red_team_player_2 VARCHAR NOT NULL,

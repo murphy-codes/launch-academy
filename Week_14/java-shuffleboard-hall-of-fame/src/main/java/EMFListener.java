@@ -6,15 +6,19 @@ import javax.servlet.annotation.WebListener;
 
 @WebListener
 public class EMFListener implements ServletContextListener {
+
   @Override
   public void contextInitialized(ServletContextEvent event) {
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("com.launchacademy.javaShuffleboard");
+    EntityManagerFactory emf =
+        Persistence.createEntityManagerFactory("com.launchacademy.javaDatabaseApplications");
     event.getServletContext().setAttribute("emf", emf);
   }
 
   @Override
   public void contextDestroyed(ServletContextEvent event) {
     EntityManagerFactory emf = (EntityManagerFactory)event.getServletContext().getAttribute("emf");
-    if (emf != null) { emf.close(); }
+    if(emf != null) {
+      emf.close();
+    }
   }
 }
