@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf86a374-84c6-47d0-b1a5-930e55a524a4" name="Default Changelist" comment="" />
+    <list default="true" id="cf86a374-84c6-47d0-b1a5-930e55a524a4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrdersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/orders/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/orders/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/orders/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/orders/new.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/orders/show.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/orders/show.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +46,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1600424066218">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600424066218" />
     <state x="945" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1600407987257">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

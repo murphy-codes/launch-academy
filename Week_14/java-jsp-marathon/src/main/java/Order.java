@@ -47,6 +47,9 @@ public class Order {
   @Column(name="item_image_url", nullable=false)
   private String itemImageURL;
 
+  @Column(name="status")
+  private String status;
+
   public Long getId() {
     return id;
   }
@@ -89,4 +92,6 @@ public class Order {
   public void setItemImageURL(String itemImageURL) {
     this.itemImageURL = itemImageURL;
   }
+  public String getStatus() { return status; }
+  public void setStatus(String status) { this.status = status; }
 }
