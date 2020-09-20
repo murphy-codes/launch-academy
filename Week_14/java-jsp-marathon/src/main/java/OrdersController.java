@@ -86,14 +86,14 @@ public class OrdersController extends HttpServlet {
         RequestDispatcher dispatcher = req.getRequestDispatcher("/views/orders/new.jsp");
         dispatcher.forward(req, resp);
       } else {
-        EntityManager em = getEmf().createEntityManager();
-        OrderService service = new OrderService(getEmf().createEntityManager());
-        if(service.save(order)) {
-          HttpSession session = req.getSession();
-          session.setAttribute("username", order.getUsername());
-        }
-        em.close();
-        resp.sendRedirect("/orders");
+          EntityManager em = getEmf().createEntityManager();
+          OrderService service = new OrderService(getEmf().createEntityManager());
+          if(service.save(order)) {
+            HttpSession session = req.getSession();
+            session.setAttribute("username", order.getUsername());
+          }
+          em.close();
+          resp.sendRedirect("/orders");
       }
     } else if (req.getServletPath().equals("/orders/update")) {
       if (Arrays.asList("confirmed","in progress","completed","cancelled").contains(req.getParameter("status"))) {

@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cf86a374-84c6-47d0-b1a5-930e55a524a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Week_08/database-drills/.idea/database-drills.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Week_08/party-playlist-persistence/.idea/party-playlist-persistence.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/OrdersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/OrdersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/orders/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/orders/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/orders/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/orders/new.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/orders/show.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/orders/show.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/OrdersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/OrdersController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +43,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -44,6 +61,17 @@
       <updated>1600369166665</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1600424066218">
