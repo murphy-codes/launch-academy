@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/rolls")
 public class RollsController {
@@ -22,7 +24,9 @@ public class RollsController {
     DiceRoller diceRoller = new DiceRoller();
     String result = "";
     if (diceCount == null) { diceCount = 1; }
-    int total = diceRoller.rollNd6(diceCount);
+    List<Integer> rolls = diceRoller.rollNd6(diceCount);
+    int total = rolls.remove(rolls.size()-1);
+    String icons = String.join(" ", diceRoller.getDieIcons(rolls));
     if (guess != null) {
       result = (total==guess ? "YOU GUESSED THE NUMBER" : (total>guess ? "Nope. Sorry. Try Again" :  "Close. If we were playing price is right rules, you would have won."));
       model.addAttribute("result", "<p" + (result.equals("YOU GUESSED THE NUMBER") ? " style=\"font-weight: bold;\"" : "") + ">Result: " + result +"</p>");
@@ -30,6 +34,7 @@ public class RollsController {
     }
     model.addAttribute("dieCount", diceCount);
     model.addAttribute("total", total);
+    model.addAttribute("icons", icons);
     return "show";
   }
 }
