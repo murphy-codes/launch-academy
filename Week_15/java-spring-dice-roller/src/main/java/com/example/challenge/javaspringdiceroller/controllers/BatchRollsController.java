@@ -29,8 +29,8 @@ public class BatchRollsController {
     List<Integer> totals = new ArrayList<>();
     int grandTotal = games.remove(games.size()-1).get(0);
     for (List<Integer> game: games) {
-      icons.add(String.join(" ", diceRoller.getDieIcons(game)));
       int rollResult = game.remove(game.size()-1);
+      icons.add(String.join(" ", diceRoller.getDieIcons(game)));
       totals.add(rollResult);
       if (guess != null) { results.add(rollResult==guess ? "<span style=\"font-weight: bold;\">YOU GUESSED THE NUMBER</span>" : (rollResult>guess ? "Nope. Sorry. Try Again" :  "Close. If we were playing price is right rules, you would have won.")); }
     }
