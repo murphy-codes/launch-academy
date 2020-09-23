@@ -1,0 +1,19 @@
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: bodyInclude (~{::#layout})}">
+
+<body>
+<div id="layout">
+  <h1>Olympic Curling League - New Team Form</span></h1>
+
+  <form action="#" th:action="@{/fantasy/teams}" th:object="${team}" method="POST">
+    <div>
+      <label th:for="teamName">Team Name</label>
+      <input type="text" th:field="*{teamName}" />
+    </div>
+
+    <div>
+      <input type="submit" value="Add New Team" />
+    </div>
+  </form>
+</div>
+</body>
+</html>
