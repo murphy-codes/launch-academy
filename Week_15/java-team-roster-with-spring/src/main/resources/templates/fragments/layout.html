@@ -11,8 +11,8 @@
 </head>
 
 <body>
-<div th:replace="~{fragments/header :: headerInclude}"></div><br>
-<th:block th:include="${content}"/>
+<div th:replace="~{fragments/header :: headerInclude}"></div>
+<div class="content"><th:block th:include="${content}"/></div>
 <div th:replace="~{fragments/footer :: footerInclude}"></div>
 </body>
 </html>

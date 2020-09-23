@@ -6,8 +6,36 @@ body {
   margin: auto;
 }
 
+.content {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
 a:hover {
   text-decoration: underline;
+}
+
+.inline {
+  display: inline;
+}
+
+.margin-left-2 {
+  margin-left: 2em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.float-center {
+  float: center;
 }
 
 /* NavBar */
@@ -27,7 +55,7 @@ a:hover {
   margin: 0.125rem 0;
 }
 
-.site-title{
+.site-title {
   color: #00255e;
   font-family: 'Tangerine', cursive;
   font-size: 2rem;
@@ -96,4 +124,9 @@ a:hover {
   width: 1000px;
   height: 3.75em;
   background-color: #e6e6e6;
+}
+
+/* Team/Position index pages */
+.no-list {
+  list-style-type: none;
 }

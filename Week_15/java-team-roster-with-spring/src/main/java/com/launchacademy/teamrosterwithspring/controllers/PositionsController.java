@@ -13,7 +13,7 @@ public class PositionsController {
     return "positions/index";
   }
 
-  @GetMapping("/{positionName}")
+  @GetMapping("/{name}")
   public String getShow(Model model) {
     return "positions/show";
   }
