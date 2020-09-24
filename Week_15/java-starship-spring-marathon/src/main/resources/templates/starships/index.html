@@ -1,0 +1,10 @@
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body})}">
+  <body>
+    <h2 class="blue-header">Starship Fleet</h2>
+    <dl th:each="starship : ${starships}">
+      <dt><h3>Starship: <a th:href="'/starships/' + ${starship.id}"><span th:text="${starship.name}">Name<span></a></h3></dt>
+      <dd>Fuel Capacity: <span th:text="${starship.fuelCapacity}">Fuel Capacity</span></dd>
+    </dl>
+    <a href="/starships/new">Add Starship</a>
+  </body>
+</html>

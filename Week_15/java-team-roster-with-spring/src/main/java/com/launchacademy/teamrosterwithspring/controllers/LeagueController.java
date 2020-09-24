@@ -10,10 +10,4 @@ import org.springframework.web.servlet.view.RedirectView;
 public class LeagueController {
   @GetMapping
   public RedirectView redirectWithUsingRedirectView() { return new RedirectView("/teams"); }
-//  public RedirectView redirectWithUsingRedirectView() { return new RedirectView("/league"); }
-//
-//  @GetMapping("/league")
-//  public String getIndex(Model model) {
-//    return "league/index";
-//  }
 }
