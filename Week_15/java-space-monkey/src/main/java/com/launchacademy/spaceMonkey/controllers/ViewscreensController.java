@@ -43,7 +43,7 @@ public class ViewscreensController {
     engine.setLocation("Engineering");
     engine.setBananas(50);
 
-    List viewscreens = new ArrayList<Viewscreen>();
+    List<Viewscreen> viewscreens = new ArrayList<>();
     viewscreens.add(main);
     viewscreens.add(engine);
     return viewscreens;

@@ -1,0 +1,12 @@
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body})}">
+  <body>
+    <div th:object="${current}">
+      <h2>Viewscreen - <span th:text="*{name}">Starship Name</span></h2>
+      <p><br>Role: <span th:text="*{role}">Role</span>
+        <br>Location: <span th:text="*{location}">Location</span>
+        <br>Banana: <span th:text="*{bananas}">Banana</span></p>
+      <p th:if="*{bananas < 500}" style="font-style: italic;">Not enough nanas...</p>
+    </div>
+    <a href="/viewscreens">Return</a>
+  </body>
+</html>
