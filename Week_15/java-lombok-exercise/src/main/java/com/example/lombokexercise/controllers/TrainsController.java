@@ -32,6 +32,7 @@ public class TrainsController {
 
   @GetMapping
   public String getTrains(Model model) {
+    System.out.println(getStation());
     model.addAttribute("station", getStation());
     model.addAttribute("trains", getTrains());
 
