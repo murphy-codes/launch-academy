@@ -1,0 +1,14 @@
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: bodyInclude (~{::#layout})}">
+
+<body>
+<div id="layout">
+  <th:block th:object="${product}">
+    <h1>Java Action Figures - <span th:text="*{name}">Product Name</span></h1>
+    <p>Price: $<span th:text="*{price}">Price</span></p>
+    <p>Description: <span th:text="*{description}">Description</span></p>
+  </th:block>
+  <hr>
+  <a href="/products/">Return to Products</a>
+</div>
+</body>
+</html>

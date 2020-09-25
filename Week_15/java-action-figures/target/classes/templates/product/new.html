@@ -1,0 +1,28 @@
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: bodyInclude (~{::#layout})}">
+
+<body>
+<div id="layout">
+  <h1>Java Action Figures - Add a New Product</h1>
+  <form action="#" th:action="@{/products}" th:object="${product}" method="POST">
+    <div>
+      <label th:for="name">Product Name</label>
+      <input type="text" th:field="*{name}" />
+    </div>
+    <div>
+      <label th:for="description">Product Description</label>
+      <input type="text" th:field="*{description}" />
+    </div>
+    <div>
+      <label th:for="price">Product Price</label>
+      <input type="number" step="0.01" th:field="*{price}" />
+    </div>
+
+    <div>
+      <input type="submit" value="Add New Product" />
+    </div>
+  </form>
+  <hr>
+  <a href="/products/">Return to Products</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<div th:fragment="headerInclude">
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="menu">
+      <li><a href="/" class="site-title">Java Action Figures</a></li>
+        <li class="header-links"><a href="/" class="vr-left navLink">.</a></li>
+        <li class="header-links vr-left">
+          <div class="dropdown">
+            <a href="/products" class="nav-drop">Products</a>
+            <div class="dropdown-content">
+              <a href="/products/0">GI Joe</a>
+              <hr class="hr-slim" />
+              <a href="/products/1">Transformer</a>
+              <hr class="hr-slim" />
+              <a href="/products/2">Dr Who</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><a href="https://spring.io/" class="vr-right margin-right-1 navLink">Spring.io</a></li>
+        <li><input type="search" placeholder="Search" class="search-bar"></input></li>
+        <li><button type="button" class="button" onclick="searchAlert()">Search</button></li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: bodyInclude (~{::#layout})}">
+
+  <body>
+    <div id="layout">
+      <h1>Java Action Figures - All Products</h1>
+      <dl class="no-list">
+        <th:block th:each="product, iter : ${products}">
+        <dt class="inline"><a th:href="@{/products/{id}(id=${iter.index})}" th:text="${product.name}">Product Name</a></dt><dd th:text="' - $' + ${product.price}" class="inline">Price</dd><br>
+        </th:block>
+      </dl>
+      <hr>
+      <a href="/products/new">Add New Product</a>
+    </div>
+  </body>
+</html>
