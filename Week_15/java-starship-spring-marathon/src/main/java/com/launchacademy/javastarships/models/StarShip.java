@@ -35,6 +35,7 @@ public class StarShip {
   }
 
   public String getFuelCapacityReading() {
-    return (fuelCapacity > 700 ? "HIGH" : (fuelCapacity < 300 ? "LOW" : "AVERAGE")) + " (" + fuelCapacity + " Teraliters)";
+//    return (fuelCapacity > 700 ? "HIGH" : (fuelCapacity < 300 ? "LOW" : "AVERAGE")) + " (" + fuelCapacity + " Teraliters)";
+    return fuelCapacity > 700 ? "high" : (fuelCapacity < 300 ? "low" : "average");
   }
 }

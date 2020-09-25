@@ -5,3 +5,15 @@
 .description {
   font-style: italic;
 }
+
+.low {
+  color: red;
+}
+
+.average {
+  color: orange;
+}
+
+.high {
+  color: green;
+}
