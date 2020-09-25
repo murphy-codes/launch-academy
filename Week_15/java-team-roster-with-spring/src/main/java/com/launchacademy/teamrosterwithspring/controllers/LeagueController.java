@@ -9,5 +9,8 @@ import org.springframework.web.servlet.view.RedirectView;
 @RequestMapping("/")
 public class LeagueController {
   @GetMapping
-  public RedirectView redirectWithUsingRedirectView() { return new RedirectView("/teams"); }
+  public RedirectView rootRedirect() { return new RedirectView("/teams"); }
+
+  @GetMapping({"/league","/leagues"})
+  public RedirectView leagueRedirect() { return new RedirectView("/teams"); }
 }
