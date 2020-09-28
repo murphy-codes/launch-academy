@@ -5,6 +5,8 @@ import com.launchacademy.javaspringappcategories.repositories.IdeaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
