@@ -29,26 +29,5 @@ public class AppCategorySeeder implements CommandLineRunner {
         appCategoryRepository.save(appCategory);
       }
     }
-
-//    AppCategory appCategory = new AppCategory();
-//    appCategory = appCategoryRepository.findByName("Social Media");
-//    System.out.println("----------------------------------------------------------------------------------------------------");
-//    System.out.println(appCategory.getName());
-//    // ----------------------------------------------------------------------------------------------------
-//    appCategory = appCategoryRepository.findAllByName("Productivity").get(0);
-//    System.out.println("----------------------------------------------------------------------------------------------------");
-//    System.out.println(appCategory.getName());
-//    // ----------------------------------------------------------------------------------------------------
-//    List<AppCategory> appCategorysTwo = appCategoryRepository.findByNameStartingWith("Gam");
-//    System.out.println("----------------------------------------------------------------------------------------------------");
-//    int index = 0;
-//    for (AppCategory appCategoryTwo: appCategorysTwo) { System.out.println("[" + (index++) + "] " + appCategoryTwo.getName()); }
-//    // ----------------------------------------------------------------------------------------------------
-//    appCategorysTwo = new ArrayList<>();
-//    appCategorysTwo = appCategoryRepository.findByNameContaining("Self");
-//    System.out.println("----------------------------------------------------------------------------------------------------");
-//    for (AppCategory appCategoryTwo: appCategorysTwo) { System.out.println("[" + (index++) + "] " + appCategoryTwo.getName()); }
-//    // ----------------------------------------------------------------------------------------------------
-//    System.out.println("----------------------------------------------------------------------------------------------------");
   }
 }
