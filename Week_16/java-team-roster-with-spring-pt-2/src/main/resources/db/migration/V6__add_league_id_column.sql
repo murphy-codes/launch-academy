@@ -1,0 +1,2 @@
+ALTER TABLE teams
+ADD COLUMN league_id INTEGER REFERENCES leagues(id);
