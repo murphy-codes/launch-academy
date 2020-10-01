@@ -1,0 +1,46 @@
+<div th:fragment="headerInclude">
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="menu">
+      <li><a href="/" class="site-title">Java Party Planner Part 1</a></li>
+        <li class="header-links"><a href="/parties" class="vr-left navLink">L</a></li>
+        <li class="header-links vr-left">
+          <div class="dropdown">
+            <a href="/parties" class="nav-drop">Parties</a>
+            <div class="dropdown-content">
+              <a href="/parties/new">New Party</a>
+              <hr class="hr-slim" />
+              <a href="/parties/0">Norway</a>
+              <a href="/parties/2">Sweden</a>
+              <a href="/parties/3">Switzerland</a>
+              <a href="/parties/1">South Korea</a>
+              <hr class="hr-slim" />
+              <a href="/parties/4">USA</a>
+            </div>
+          </div>
+        </li>
+        <li class="header-links vr-left">
+          <div class="dropdown">
+            <a href="/friends" class="nav-drop">Friends</a>
+            <div class="dropdown-content">
+              <a href="/friends/Lead">Lead</a>
+              <a href="/friends/Second">Second</a>
+              <a href="/friends/Third">Third</a>
+              <a href="/friends/Fourth">Fourth</a>
+              <a href="/friends/Alternate">Alternate</a>
+              <hr class="hr-slim" />
+              <a href="/friends">...</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
+        <li><a href="https://spring.io/" class="vr-right margin-right-1 navLink">Spring.io</a></li>
+        <li><input type="search" placeholder="Search" class="search-bar"></input></li>
+        <li><button type="button" class="button" onclick="searchAlert()">Search</button></li>
+      </ul>
+    </div>
+  </div>
+</div>

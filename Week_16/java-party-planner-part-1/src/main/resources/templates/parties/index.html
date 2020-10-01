@@ -1,0 +1,14 @@
+<html xmlns:th="https://www.thymeleaf.org" th:replace="~{fragments/layout :: bodyInclude (~{::#layout})}">
+<body>
+<div id="layout">
+  <h1>Java Party Planner - All Parties</h1>
+  <ul th:each="party : ${parties}" class="margin-left-2 no-list">
+    <li><a th:href="'/parties/' + ${party.name}" th:text="${party.name}">Party Name</a></li><br>
+    <div class="indent-block-2">
+      <p>Description: <span th:text="${party.description}">Party Description</span></p>
+      <p>Location: <span th:text="${party.location}">Party Location</span></p>
+    </div><hr>
+  </ul>
+</div>
+</body>
+</html>
