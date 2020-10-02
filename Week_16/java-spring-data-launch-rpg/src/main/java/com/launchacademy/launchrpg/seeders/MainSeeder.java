@@ -373,7 +373,5 @@ public class MainSeeder implements CommandLineRunner {
     if (Lists.newArrayList(playerCharacterRepository.findAll()).size() == 0) { for (PlayerCharacter newPlayerCharacter: playerCharacters) { playerCharacterRepository.save(newPlayerCharacter); } }
     if (Lists.newArrayList(schoolRepository.findAll()).size() == 0) { for (School newSchool: schools) { schoolRepository.save(newSchool); } }
     if (Lists.newArrayList(spellRepository.findAll()).size() == 0) { for (Spell newSpell: spells) { spellRepository.save(newSpell); } }
-
-
   }
 }
