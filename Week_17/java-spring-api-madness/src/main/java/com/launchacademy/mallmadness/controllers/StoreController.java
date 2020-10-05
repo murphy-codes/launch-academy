@@ -21,11 +21,11 @@ public class StoreController {
   @GetMapping
   public String getIndex(Model model) {
     model.addAttribute("stores", Lists.newArrayList(storeRepository.findAll()));
-    return "/stores/index";
+    return "stores/index";
   }
 
   @GetMapping("/new")
-  public String getNew(@ModelAttribute Store store, Model model) { return "/stores/new"; }
+  public String getNew(@ModelAttribute Store store, Model model) { return "stores/new"; }
 
   @PostMapping
   private String getPost(@ModelAttribute @Valid Store store, BindingResult bindingResult) {
