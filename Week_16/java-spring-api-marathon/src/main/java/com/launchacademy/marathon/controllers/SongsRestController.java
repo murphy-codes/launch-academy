@@ -42,4 +42,5 @@ public class SongsRestController {
 
   @PostMapping
   public Song createSong(@RequestBody Song song) { return songRepository.save(song); }
+  //curl -X POST localhost:8080/api/v1/songs -H 'Content-type:application/json' -d '{"title": "A Whole New World", "genre": "Soundtrack", "releaseYear": "1992", "explicitContent": "false"}'
 }
