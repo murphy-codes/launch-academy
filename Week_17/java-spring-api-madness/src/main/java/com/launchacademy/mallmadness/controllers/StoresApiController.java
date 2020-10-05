@@ -36,7 +36,7 @@ public class StoresApiController {
     @ResponseStatus(HttpStatus.NOT_FOUND)
     String storeNotFoundHandler(StoreNotFoundException ex) { return ex.getMessage(); }
   }
-  
+
   @GetMapping("/{id}")
   public Store getStoreById(@PathVariable Integer id) { return storeRepository.findById(id).orElseThrow(() -> new StoreNotFoundException()); }
 
