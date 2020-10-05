@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/stores")
-public class StoreController {
+public class StoresController {
   @Autowired private StoreRepository storeRepository;
 
   @GetMapping
